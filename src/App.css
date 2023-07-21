@@ -1,38 +1,208 @@
-.App {
+body {
+  background-color: rgb(12, 12, 12);
+  color: white;
+  caret-color: #339933;
+  overflow-x: hidden;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+hr {
+  border: none;
+  height: 3px;
+  width: 80%;
+  background-color: #ccc;
+  margin: 20px 10vw;
+}
+.NAVIGATION {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navButtons {
+  color: white;
+  font-size: 28px;
+  border-radius: 25px;
+  margin: 25px;
+  font-weight: bold;
+  display: inline;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+.navButtons:hover {
+  color: #339933;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.INTRO {
+  background-image: url('C:\Users\samue\Desktop\Portfolio React Project\portfolio\public\Pictures\DarkBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.introText {
+  margin: 20vw 20vw;
+}
+h1 {
+  font-size: 60px;
+  color: #339933;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* .PORTFOLIO {
+  
+} */
+h3 {
+  font-size: 38px;
+  position: relative;
+  left: 45vw;
+  top: 25vw;
+}
+#darkBackgroundPicture {
+  position: absolute;
+  width: 100%;
+}
+.paragraph {
+  font-size: 1.5vw;
+  position: absolute;
+  width: 400px;
+  left: 20vw;
+  margin-top: 5vh;
+}
+.pictures {
+  width: 45vw;
+  height: 30vw;
+  position: relative;
+  top: 30vw;
+  left: 20vw;
+  border-radius: 25px;
+  rotate: 3deg;
+}
+.picturesFront {
+  width: 45vw;
+  height: 30vw;
+  margin-left: 22vw;
+  border-radius: 25px;
+  rotate: 6deg;
+}
+
+.projectLinks {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+  font-size: 30px;
+  border: 3px solid #339933;
+  border-radius: 25px;
+  padding: 5px 5vw;
+  background-color: #33993351;
+  position: absolute;
+  margin-top: 38vh;
+  left: 66vw;
+  transition: background-color 0.5s;
+  transition-timing-function: linear;
+}
+.projectLinks:hover {
+  background-color:#339933;
+}
+
+.FORM {
+  height: 650px;
+  width: 50vw;
+  margin: 15vh 25vw;
+}
+.formInput {
+  width: 100%;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 4px;
+  font-size: 16px;
+  border: 3px solid #339933;
+  background-color: #33993351;
+  color: white;
+  transition: background-color 0.5s;
+  transition-timing-function: linear;
+}
+.formInput:hover {
+  background-color:#339933;
+}
+.labels {
+  font-size: 20px;
+}
+#contacText {
+  color: white;
+  font-size: 40px;
+}
+#formSubmit {
+  padding: 12px 5vw;
+  margin-top: 10px;
+  float: right;
+  background-color: #33993351;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 24px;
+  border: 3px solid #339933;
+  transition: background-color 0.5s;
+  transition-timing-function: linear;
+}
+#formSubmit:hover {
+  background: #339933;
+}
+#mapsContact {
+  margin-left: 5vw;
+}
+#formsText {
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.contact {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.FOOTER {
+  background-color: #1a1a1a;
+  height: 150px;
+  display: block;
+}
+#sendMail {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+#email {
+  position: relative;
+  left: 800px;
+  color: white;
+  text-decoration: none;
+}
+.linkLine {
+  width: 380px;
+  height: 1px;
+  background-image: linear-gradient(270deg, #339933,#33993351);
+  margin-top: 0px;
+}
+.emailAnimetaion {
+  font-size: 26px;
+  width: 100px;
+  white-space: nowrap;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+.emailAnimetaion.inView {
+  width: 100px;
+  opacity: 1;
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+@keyframes spin {
+  from {font-size: 8px;}
+  to {font-size: 26px;}
+}
+
+.portfolioAppear {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+.portfolioAppear.inView {
+  opacity: 1;
 }

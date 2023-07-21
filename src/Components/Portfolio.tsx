@@ -24,20 +24,24 @@ export default function Portfolio() {
       return (
       <>
       <hr />
-            <div className='PORTFOLIO'>
+            <div className='PORTFOLIO' id='portf'>
                   <div ref={sectionRef1}>
                         <div ref={ref1} className={`portfolioAppear ${inView1 ? 'inView' : ''}`}>
                               <h3>Digiruori</h3>
-                              <a href="https://digiruori.fi/pelit/r6/" target="_blank"  rel="noopener noreferrer">
-                                    <img src="Pictures/AvaruuspeliAloitus.jpg" alt="Avaruuspeli" className='pictures'/>
-                                    <img src="Pictures/Avaruuspeli.jpg" alt="Avaruuspeli" className='picturesFront'/>
-                              </a>
-                              <a href="https://digiruori.fi/pelit/r6/" target="_blank"  rel="noopener noreferrer" className='projectLinks'>Visit the site</a>
-                              <p className='paragraph'>
-                                    In this project me and my team created a game for a elementary students. We created this 
-                                    game using HTML canvas. My part in the project was the player, score, dice and canvas.
-                                    There were many problems along the way for example the camera following the player or 
-                                    the canvas not clearing last drawn pictures.
+                                    <a href="https://digiruori.fi/pelit/r6/" target="_blank"  rel="noopener noreferrer">
+                                    <div className='group1'>
+                                          <img src="Pictures/AvaruuspeliKeski.jpg" alt="Avaruuspeli" className='picturesSpace'/>
+                                          <img src="Pictures/Avaruuspeli.jpg" alt="Avaruuspeli" className='picturesSpace'/>
+                                          <img src="Pictures/AvaruuspeliAloitus.jpg" alt="Avaruuspeli" className='picturesSpace'/>
+                                    </div>
+                                    </a>
+                              <a href="https://digiruori.fi/pelit/r6/" target="_blank"  rel="noopener noreferrer" className='projectLinks1'>Visit the site</a>
+                              <p className='paragraph1'>
+                              In this project, my team and I developed an educational game for elementary students. We utilized HTML canvas 
+                              to create the game. My specific contributions to the project included implementing the player mechanics, score 
+                              tracking, dice functionality, and managing the canvas rendering. Throughout the development process, we 
+                              encountered various challenges, such as resolving issues with the camera following the player and clearing 
+                              previously drawn images on the canvas.
                               </p>
                         </div>
                   </div>
@@ -45,29 +49,37 @@ export default function Portfolio() {
                         <div ref={ref2} className={`portfolioAppear ${inView2 ? 'inView' : ''}`}>
                               <h3>Digiruori</h3>
                               <a href="https://digiruori.fi/pelit/r6p2/" target="_blank"  rel="noopener noreferrer">
-                                    <img src="Pictures/KertotaulupeliAloitus.jpg" alt="Avaruuspeli" className='pictures'/>
-                                    <img src="Pictures/Kertotaulupeli.jpg" alt="Kertotaulupeli" className='picturesFront'/>
+                                    <div className='group2'>
+                                          <img src="Pictures/KertotaulupeliKeski.jpg" alt="Kertotaulupeli" className='picturesMulti'/>
+                                          <img src="Pictures/Kertotaulupeli.jpg" alt="Kertotaulupeli" className='picturesMulti'/>
+                                          <img src="Pictures/KertotaulupeliAloitus.jpg" alt="Kertotaulupeli" className='picturesMulti'/>
+                                    </div>
                               </a>
-                              <a href="https://digiruori.fi/pelit/r6p2/" target="_blank"  rel="noopener noreferrer" className='projectLinks'>Visit the site</a>
-                              <p className='paragraph'>
-                                    In this project me and my team created a game about multiplications for elementary students. 
-                                    I created the spinwheel and the mobile visual side. This project was creted using JavaScript 
-                                    mostly.
+                              <a href="https://digiruori.fi/pelit/r6p2/" target="_blank"  rel="noopener noreferrer" className='projectLinks2'>Visit the site</a>
+                              <p className='paragraph2'>
+                              For this project, our team designed an interactive multiplication game tailored for elementary students. I took 
+                              the lead in developing the spinwheel feature and focused on optimizing the game for mobile devices. The majority 
+                              of the project was built using JavaScript.
                               </p>
                         </div>
                   </div>
                   <div ref={sectionRef3}>
                         <div ref={ref3} className={`portfolioAppear ${inView3 ? 'inView' : ''}`}>
                               <h3>Jalkahoitola Askel</h3>
-                              <a href="https://digiruori.fi/pelit/r6p2/" target="_blank"  rel="noopener noreferrer">
-                                    <img src="Pictures/Jalkahoitola-askel.jpg" alt="Jalkahoitola" className='pictures'/>
-                                    <img src="Pictures/Jalkahoitola-askelYhteydenotto.jpg" alt="Avaruuspeli" className='picturesFront'/>
+                              <a href="http://www.jalkahoitola-askel.fi/" target="_blank"  rel="noopener noreferrer">
+                                    <div className='group3'>
+                                          <img src="Pictures/Jalkahoitola-askelPalvelut.jpg" alt="Jalkahoitola" className='picturesFeet'/>
+                                          <img src="Pictures/Jalkahoitola-askelYhteydenotto.jpg" alt="Avaruuspeli" className='picturesFeet'/>
+                                          <img src="Pictures/Jalkahoitola-askel.jpg" alt="Avaruuspeli" className='picturesFeet'/>
+                                    </div>
                               </a>
-                              <a href="http://www.jalkahoitola-askel.fi/" rel="noopener noreferrer" target="_blank" className='projectLinks'>Visit the site</a>
-                              <p className='paragraph'>
-                                    This project was for a company called Jalkahoitola Askel. I created this using webhosting called 
-                                    Planeetta Internet Oy. It's tools were limited, but I created a copy of this with React. Most of
-                                    the problems in this project was limitation with the technologies that was given to me.
+                              <a href="http://www.jalkahoitola-askel.fi/" rel="noopener noreferrer" target="_blank" className='projectLinks3'>Visit the site</a>
+                              <p className='paragraph3'>
+                              I worked on a project for a company called Jalkahoitola Askel. To host the project, I used a web hosting service called
+                              Planeetta Internet Oy. Although the tools provided by the hosting service had some limitations, I managed to create 
+                              the required solution. Later, I recreated the project using React, which offered more flexibility and capabilities. 
+                              Despite the challenges posed by the initial technologies, I successfully delivered a functional and improved version 
+                              using React.
                               </p>
                         </div>
                   </div>

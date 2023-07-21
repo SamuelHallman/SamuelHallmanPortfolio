@@ -1,7 +1,12 @@
+html {
+  scroll-behavior: smooth;
+}
+p {
+  font-size: 26px;
+}
 body {
-  background-color: rgb(12, 12, 12);
-  color: white;
-  caret-color: #339933;
+  background-color: rgb(220, 220, 220);
+  color: black;
   overflow-x: hidden;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -9,27 +14,44 @@ hr {
   border: none;
   height: 3px;
   width: 80%;
-  background-color: #ccc;
+  background-color: black;
   margin: 20px 10vw;
 }
+
 .NAVIGATION {
+  position: absolute;
+  width: 100%;
+  height: 150px;
   list-style-type: none;
   margin: 0;
   overflow: hidden;
   text-align: center;
 }
-.navButtons {
-  color: white;
+.navButtonsList {
   font-size: 28px;
   border-radius: 25px;
-  margin: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
   font-weight: bold;
   display: inline;
-  text-decoration: none;
+  clear: both;
+  overflow: hidden;
+  white-space: nowrap;
   transition: color 0.5s;
+  position: relative;
+  top: 20px;
+}
+.navButtons {
+  color: rgb(220, 220, 220);
+  text-decoration: none;
 }
 .navButtons:hover {
   color: #339933;
+}
+.mobileNavButton {
+  position: absolute;
+  left: 40000px;
+  opacity: 0;
 }
 
 .INTRO {
@@ -37,70 +59,276 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  height: 1200px;
   padding: 10px;
 }
 .introText {
-  margin: 20vw 20vw;
+  text-align: left;
+  width: 800px;
 }
 h1 {
-  font-size: 60px;
-  color: #339933;
+  font-size: 70px;
+  position: absolute;
+  display: inline;
+  white-space: nowrap;
+  opacity: 1;
+  top: 400px;
+  left: 5%;
+  animation-name: textMovement;
+  animation-timing-function:linear ;
+  animation-duration: 3s;
+  color: rgb(220, 220, 220);
+}
+@keyframes textMovement {
+  0%   {opacity: 0; left: 50%;}
+  50%  {opacity: 1;left: 50%;}
+  100% {left: 5%;}
+}
+h2 {
+  font-size: 36px;
+  position: absolute;
+  width: 700px;
+  top: 630px;
+  left: 5%;
+  animation-name: fadeIn;
+  color: rgb(220, 220, 220);
+  opacity: 1;
+  animation-duration: 5s;
+}
+@keyframes fadeIn {
+  0%   {opacity: 0;}
+  50%  {opacity: 0;}
+  100% {opacity: 1;}
+}
+.samuel {
+  animation-name: shadow;
+  animation-delay: 4s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes shadow {
+  0% {text-shadow: 0px 0px 0px rgb(220, 220, 220)}
+  100% {text-shadow: 2px 2px 30px rgb(220, 220, 220)}
+}
+.facePicture {
+  width: 1300px;
+  height: 1120px;
+  position: absolute;
+  opacity: 1;
+  right: 0px;
+  top: 100px;
+  animation-name: fadeInFace;
+  animation-duration: 5s;
+}
+@keyframes fadeInFace {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
-/* .PORTFOLIO {
-  
-} */
+
+.ABOUT {
+  text-align: left;
+  width: 100%;
+  height: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 100px;
+}
+#aboutHeading {
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+}
+.aboutText {
+  width: 700px;
+}
+
+
+.PORTFOLIO {
+  text-align: left;
+}
 h3 {
   font-size: 38px;
-  position: relative;
-  left: 45vw;
-  top: 25vw;
+  text-align: center;
+  margin-bottom: 450px;
 }
 #darkBackgroundPicture {
   position: absolute;
   width: 100%;
 }
-.paragraph {
-  font-size: 1.5vw;
-  position: absolute;
-  width: 400px;
-  left: 20vw;
-  margin-top: 5vh;
-}
-.pictures {
-  width: 45vw;
-  height: 30vw;
+.paragraph1 {
+  font-size: 24px;
   position: relative;
-  top: 30vw;
-  left: 20vw;
-  border-radius: 25px;
-  rotate: 3deg;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  align-items: center;
+  margin-bottom: 100px;
 }
-.picturesFront {
-  width: 45vw;
-  height: 30vw;
-  margin-left: 22vw;
+.paragraph2 {
+  font-size: 24px;
+  position: relative;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.paragraph3 {
+  font-size: 24px;
+  position: relative;
+  top: 90px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.picturesSpace {
+  width: 500px;
+  height: 300px;
+  position: absolute;
   border-radius: 25px;
+  top: 3170px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1s cubic-bezier(.07,.51,.22,.89);
+}
+.picturesSpace:nth-child(1) {
   rotate: 6deg;
 }
+.picturesSpace:nth-child(2) {
+  rotate: 3deg;
+}
+.group1:hover > .picturesSpace:nth-child(1) {
+  transform: translate(-135%,-40%) rotate(-15deg);
+}
+.group1:hover > .picturesSpace:nth-child(2) {
+  transform: translate(30%,-50%) rotate(5deg);
+}
+.group1:hover > .picturesSpace:nth-child(3) {
+  transform: translate(-50%,-50%);
+}
 
-.projectLinks {
+.picturesMulti {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  border-radius: 25px;
+  top: 4190px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1s cubic-bezier(.07,.51,.22,.89);
+}
+.picturesMulti:nth-child(1) {
+  rotate: 6deg;
+}
+.picturesMulti:nth-child(2) {
+  rotate: 3deg;
+}
+.group2:hover > .picturesMulti:nth-child(1) {
+  transform: translate(-135%,-40%) rotate(-15deg);
+}
+.group2:hover > .picturesMulti:nth-child(2) {
+  transform: translate(30%,-50%) rotate(5deg) ;
+}
+.group2:hover > .picturesMulti:nth-child(3) {
+  transform: translate(-50%,-50%) ;
+}
+
+.picturesFeet {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  border-radius: 25px;
+  top: 5080px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1s cubic-bezier(.07,.51,.22,.89);
+}
+.picturesFeet:nth-child(1) {
+  rotate: 6deg;
+}
+.picturesFeet:nth-child(2) {
+  rotate: 3deg;
+}
+.group3:hover > .picturesFeet:nth-child(1) {
+  transform: translate(-135%,-40%) rotate(-15deg);
+}
+.group3:hover > .picturesFeet:nth-child(2) {
+  transform: translate(30%,-50%) rotate(5deg);
+}
+.group3:hover > .picturesFeet:nth-child(3) {
+  transform: translate(-50%,-50%);
+}
+
+.projectLinks1 {
   text-decoration: none;
-  color: white;
+  color: black;
+  white-space: nowrap;
+  font-size: 30px;
+  border: 3px solid #339933;
+  border-radius: 25px;
+  padding: 5px;
+  background-color: #33993351;
+  position: relative;
+  top: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  transition: background-color 0.5s;
+  transition-timing-function: linear;
+}
+.projectLinks2 {
+  text-decoration: none;
+  color: black;
   white-space: nowrap;
   font-size: 30px;
   border: 3px solid #339933;
   border-radius: 25px;
   padding: 5px 5vw;
   background-color: #33993351;
-  position: absolute;
-  margin-top: 38vh;
-  left: 66vw;
+  position: relative;
+  top: 230px;
+  display: grid;
+  place-items: center;
+  margin-left: 35vw;
+  margin-right: 35vw;
   transition: background-color 0.5s;
   transition-timing-function: linear;
 }
-.projectLinks:hover {
+.projectLinks3 {
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+  font-size: 30px;
+  border: 3px solid #339933;
+  border-radius: 25px;
+  padding: 5px 5vw;
+  background-color: #33993351;
+  margin-left: 35vw;
+  margin-right: 35vw;
+  position: relative;
+  top: 390px;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.5s;
+  transition-timing-function: linear;
+}
+.projectLinks1:hover {
+  background-color:#339933;
+}
+.projectLinks2:hover {
+  background-color:#339933;
+}
+.projectLinks3:hover {
   background-color:#339933;
 }
 
@@ -115,28 +343,33 @@ h3 {
   border-radius: 25px;
   margin: 4px;
   font-size: 16px;
-  border: 3px solid #339933;
+  margin-bottom: 30px;
+  border: 1px solid #339933;
+  color: black;
   background-color: #33993351;
-  color: white;
   transition: background-color 0.5s;
   transition-timing-function: linear;
+  animation-name: Wrong;
 }
 .formInput:hover {
   background-color:#339933;
 }
 .labels {
-  font-size: 20px;
+  font-size: 26px;
+  margin-left: 30px;
 }
-#contacText {
-  color: white;
+#contactText {
+  color: rgb(220, 220, 220);
   font-size: 40px;
+  position: relative;
+  bottom: 40px;
 }
 #formSubmit {
   padding: 12px 5vw;
   margin-top: 10px;
   float: right;
   background-color: #33993351;
-  color: white;
+  color: black;
   cursor: pointer;
   border-radius: 25px;
   font-size: 24px;
@@ -151,7 +384,8 @@ h3 {
   margin-left: 5vw;
 }
 #formsText {
-  color: white;
+  color: rgb(220, 220, 220);
+  font-size: 24px;
 }
 .contact {
   display: flex;
@@ -159,26 +393,38 @@ h3 {
 }
 
 .FOOTER {
-  background-color: #1a1a1a;
+  background-color: black;
   height: 150px;
   display: block;
 }
-#sendMail {
+#rights {
+  font-size: 24px;
+  color: rgb(220, 220, 220);
   position: relative;
-  top: 50px;
-  left: 50px;
+  top: 60px;
+  left: 8vw;
 }
 #email {
   position: relative;
-  left: 800px;
-  color: white;
+  left: 60vw;
+  top: 0px;
+  color: rgb(220, 220, 220);
   text-decoration: none;
+}
+#emailText {
+  width: 380px;
+  height: 20px;
+  font-size: 26px;
+  transition: color 0.5s;
 }
 .linkLine {
   width: 380px;
-  height: 1px;
-  background-image: linear-gradient(270deg, #339933,#33993351);
+  height: 2px;
+  background-image: linear-gradient(270deg, #339933,rgb(10, 10, 10));
   margin-top: 0px;
+}
+#emailText:hover {
+  color: #339933;
 }
 .emailAnimetaion {
   font-size: 26px;
@@ -187,22 +433,154 @@ h3 {
   transition: opacity 0.5s ease-in-out;
   opacity: 0;
 }
-.emailAnimetaion.inView {
-  width: 100px;
-  opacity: 1;
-  animation-name: spin;
-  animation-duration: 1s;
-  animation-timing-function: linear;
+.sentEmail {
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  width: 400px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #1a1a1a;
 }
-@keyframes spin {
-  from {font-size: 8px;}
-  to {font-size: 26px;}
+.load {
+  height: 5px;
+  position: relative;
+  bottom: 59px;
+  width: 400px;
+  border-radius:0px 0px 5px 5px;
+  background-color: #339933;
+  animation-name: loading;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+}
+@keyframes loading {
+  from {width: 400px;}
+  to { width: 1px;}
+}
+.removeLoad {
+  background-color: #1a1a1a;
+  color: rgb(220, 220, 220);
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 90%;
+  top: 5px;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+.removeLoad:hover {
+  color: #339933;
+}
+.loadText {
+  position: relative;
+  bottom: 50px;
+  width: 250px;
+  left: 10px;
+  font-size: 22px;
+  color: rgb(220, 220, 220);
 }
 
+
 .portfolioAppear {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
   opacity: 0;
 }
 .portfolioAppear.inView {
   opacity: 1;
+}
+
+
+@media only screen  and (max-width: 1000px){
+  .NAVIGATION {
+    background-color: black;
+    top: 70px;
+    left: 0px;
+  }
+  .navButtonsList {
+    margin-left: 0px;
+    margin-right: 0px;
+    top: 0px;
+  }
+  .navButtons {
+    color: rgb(220, 220, 220);
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 0px;
+    display: block;
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 50px;
+    padding: 0px;
+    width: 100%;
+    top: 0px;
+    left: -40px;
+  }
+  .navButtons:hover {
+    background-color: #339933;
+    color: white;
+    width: 100%;
+  }
+  .mobileNavButton {
+    border: none;
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    color: rgb(220, 220, 220);
+    font-size: 40px;
+    opacity: 1;
+    cursor: pointer;
+    left: 0px;
+    top: 0px;
+    display: grid;
+    place-items: center;
+  }
+  .mobileNavButton:hover {
+    background-color: #339933;
+  }
+  @keyframes fadeIn {
+    0%   {opacity: 0; }
+    50%  {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  @keyframes textMovement {
+    0%   {opacity: 0;}
+    100%  {opacity: 1;}
+  }
+  
+  .FOOTER {
+    display: grid;
+    place-items: center;
+  }
+  #rights {
+    position: relative;
+    left: 2vw;
+    top: 10px;
+  }
+  #email {
+    margin-right: 120%;
+    position: relative;
+    top: -20px;
+  }
+  .projectLinks1 {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  .projectLinks2 {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  .projectLinks3 {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  .facePicture {
+    opacity: 0;
+  }
+  @keyframes fadeInFace {
+    0% {opacity: 0;}
+    100% {opacity: 0;}
+  }
 }

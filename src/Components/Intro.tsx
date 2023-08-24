@@ -13,7 +13,7 @@ export default function Intro() {
       return (
             <>
             <div className='INTRO'>
-            <img src="Pictures/MyFace.JPG" alt="myFace" className='facePicture' />
+            <img src={process.env.PUBLIC_URL + "/Pictures/MyFace.JPG"} alt="myFace" className='facePicture' />
             <Navigation />
                   <div className='introText'>
                         <h1>HI, MY <br /> NAME IS <span className='samuel'>SAMUEL</span></h1>
